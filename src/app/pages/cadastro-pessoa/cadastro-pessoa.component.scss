@@ -1,0 +1,25 @@
+.form-style {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1%;
+}
+
+.mat-form {
+    margin: 5%;
+}
+
+.button-limpar {
+    width: 15%;
+    margin-right: 25px;
+}
+
+.button-salvar {
+    width: 15%;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1%;
+}

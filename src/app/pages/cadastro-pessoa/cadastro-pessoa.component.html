@@ -1,0 +1,55 @@
+<mat-card class="mat-form">
+    
+    <mat-card-title>Cadastro de Pessoa</mat-card-title>
+    <mat-card-subtitle>Realize o Cadastro e Edição de pessoas</mat-card-subtitle>
+    <mat-card-content>
+        <form class="form-style" [formGroup]="form">
+            
+                <mat-form-field appearance="outline">
+                    <mat-label>Nome</mat-label>
+                    <input matInput placeholder="Nome" formControlName="nome">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>CPF</mat-label>
+                    <input matInput placeholder="000.000.000-00" formControlName="cpf" formControlName="cpf">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Profissão</mat-label>
+                    <input matInput placeholder="Fullstack Developer" formControlName="cpf" formControlName="profissao">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="email@email.com" formControlName="cpf" formControlName="email">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Select me</mat-label>
+                    <mat-select formControlName="cor">
+                        <mat-option *ngFor="let cor of coresSelect" [value]="cor" >
+                          {{cor}}
+                        </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="outline" class="col-md-2">
+                    <mat-label>Data de Nascimento</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="dataDeNascimento">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-progress-bar *ngIf="isLoading" mode="query"></mat-progress-bar>
+    <mat-card-actions class="card-actions">
+        <button class="button-limpar" color="warn" mat-button (click)="limpar()">Limpar</button>
+        <button class="button-salvar" color="primary" mat-raised-button (click)="salvar()" [disabled]="this.form.invalid">Salvar</button>
+    </mat-card-actions>
+    
+</mat-card>

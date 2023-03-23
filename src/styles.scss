@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/*Snackbar colors*/
+.alertSnack {
+    background: #e1f40b;
+    color: azure;
+  }
+  .butttonAlertSnack button{
+    background: #e1f40b;
+    color:azure;
+  }
+  
+  .sucessSnack {
+    background: #1c8505;
+    color: azure;
+  }
+  .butttonSucessSnack button{
+    background:  #1c8505;
+    color:azure ;
+  }
+  
+  .warningSnack {
+    background: #eb7b08;
+    color:azure;
+  }
+  .butttonWarningSnack button{
+    background: #eb7b08;
+    color:azure;
+  }
+  
+  .errorSnack {
+    color:azure;
+    background: #eb0417
+  }
+  .butttonErrorSnack button{
+    background: #eb0417;
+    color:azure;
+  }
